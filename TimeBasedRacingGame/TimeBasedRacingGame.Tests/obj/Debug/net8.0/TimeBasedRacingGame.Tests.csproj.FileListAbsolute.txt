@@ -1,0 +1,6 @@
+D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\TimeBasedRacingGame.Tests\obj\Debug\net8.0\TimeBasedRacingGame.Tests.csproj.AssemblyReference.cache
+D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\TimeBasedRacingGame.Tests\obj\Debug\net8.0\TimeBasedRacingGame.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\TimeBasedRacingGame.Tests\obj\Debug\net8.0\TimeBasedRacingGame.Tests.AssemblyInfoInputs.cache
+D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\TimeBasedRacingGame.Tests\obj\Debug\net8.0\TimeBasedRacingGame.Tests.AssemblyInfo.cs
+D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\TimeBasedRacingGame.Tests\obj\Debug\net8.0\TimeBasedRacingGame.Tests.csproj.CoreCompileInputs.cache
+D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\TimeBasedRacingGame.Tests\obj\Debug\net8.0\TimeBasedRacingGame.Tests.sourcelink.json

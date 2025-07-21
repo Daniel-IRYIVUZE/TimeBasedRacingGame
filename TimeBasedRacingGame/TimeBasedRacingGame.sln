@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeBasedRacingGame", "TimeBasedRacingGame.csproj", "{8245AE81-77A2-B879-F95D-2155C22AB24A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeBasedRacingGame.Tests", "TimeBasedRacingGame.Tests\TimeBasedRacingGame.Tests.csproj", "{3CEE9C17-B0F3-E551-8D5B-BB29B937A0E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8245AE81-77A2-B879-F95D-2155C22AB24A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8245AE81-77A2-B879-F95D-2155C22AB24A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8245AE81-77A2-B879-F95D-2155C22AB24A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8245AE81-77A2-B879-F95D-2155C22AB24A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CEE9C17-B0F3-E551-8D5B-BB29B937A0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CEE9C17-B0F3-E551-8D5B-BB29B937A0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CEE9C17-B0F3-E551-8D5B-BB29B937A0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CEE9C17-B0F3-E551-8D5B-BB29B937A0E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6489278-DF0E-48AE-BC98-03718D202A0E}
+	EndGlobalSection
+EndGlobal
