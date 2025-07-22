@@ -3,11 +3,10 @@ D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\bin\Debug\net8.0-windows
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\bin\Debug\net8.0-windows\TimeBasedRacingGame.runtimeconfig.json
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\bin\Debug\net8.0-windows\TimeBasedRacingGame.dll
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\bin\Debug\net8.0-windows\TimeBasedRacingGame.pdb
+D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\MainWindow.baml
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\MainWindow.g.cs
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\App.g.cs
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\TimeBasedRacingGame_MarkupCompile.cache
-D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\TimeBasedRacingGame_MarkupCompile.lref
-D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\MainWindow.baml
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\TimeBasedRacingGame.g.resources
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\TimeBasedRacingGame.GeneratedMSBuildEditorConfig.editorconfig
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\TimeBasedRacingGame.AssemblyInfoInputs.cache
@@ -19,3 +18,4 @@ D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\TimeBasedRacingGame.pdb
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\TimeBasedRacingGame.genruntimeconfig.cache
 D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\ref\TimeBasedRacingGame.dll
+D:\End projects\TimeBasedRacingGame\TimeBasedRacingGame\obj\Debug\net8.0-windows\TimeBasedRacingGame_MarkupCompile.lref

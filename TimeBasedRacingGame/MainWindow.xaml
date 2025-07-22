@@ -5,82 +5,80 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeBasedRacingGame"
         mc:Ignorable="d"
-        Title="C# Speed Rush" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid Margin="10">
+        Title="C# Speed Rush" Height="500" Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="15">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        
-        <!-- Race Setup Section -->
-        <GroupBox Grid.Row="0" Header="Race Setup" Margin="0,0,0,10">
-            <StackPanel Orientation="Horizontal">
-                <ComboBox x:Name="carComboBox" Width="200" Margin="5" 
-                          DisplayMemberPath="Name" SelectedIndex="0"/>
-                <Button x:Name="startRaceButton" Content="Start Race" Margin="5" 
-                        Width="100" Click="StartRaceButton_Click"/>
-            </StackPanel>
-        </GroupBox>
-        
-        <!-- Race Information Section -->
-        <GroupBox Grid.Row="1" Header="Race Information">
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <TextBlock Text="C# Speed Rush" 
+                       FontSize="24" FontWeight="Bold" 
+                       HorizontalAlignment="Center"/>
+            <TextBlock x:Name="statusText" Text="Select a car and start the race!"
+                       HorizontalAlignment="Center" FontSize="14"/>
+        </StackPanel>
+
+        <!-- Car Selection -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <ComboBox x:Name="carComboBox" Width="200" Margin="0,0,10,0">
+                <ComboBoxItem Tag="Eco">Eco Car (Efficient)</ComboBoxItem>
+                <ComboBoxItem Tag="Sport">Sport Car (Fast)</ComboBoxItem>
+                <ComboBoxItem Tag="Muscle">Muscle Car (Balanced)</ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="startButton" Content="Start Race" Width="100" Click="StartButton_Click"/>
+        </StackPanel>
+
+        <!-- Race Info -->
+        <StackPanel Grid.Row="2" Margin="0,20">
             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                
-                <!-- Lap Information -->
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="Current Lap:" Margin="5"/>
-                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding RaceManager.LapDisplay}" Margin="5"/>
-                
-                <!-- Lap Progress -->
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Lap Progress:" Margin="5"/>
-                <ProgressBar Grid.Row="1" Grid.Column="1" Height="20" Margin="5" 
-                             Value="{Binding RaceManager.LapProgress}"/>
-                
-                <!-- Fuel Information -->
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="Fuel Level:" Margin="5"/>
-                <ProgressBar Grid.Row="2" Grid.Column="1" Height="20" Margin="5" 
-                             Maximum="{Binding RaceManager.SelectedCar.FuelCapacity}"
-                             Value="{Binding RaceManager.SelectedCar.CurrentFuel}"/>
-                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding RaceManager.SelectedCar.CurrentFuel, StringFormat={}{0:0.0} liters}" 
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Lap:" FontWeight="Bold"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="lapText" Text="1/5"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Fuel:" FontWeight="Bold"/>
+                <ProgressBar Grid.Row="1" Grid.Column="1" Height="20" x:Name="fuelBar"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" x:Name="fuelText" 
                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                
-                <!-- Time Information -->
-                <TextBlock Grid.Row="3" Grid.Column="0" Text="Time Remaining:" Margin="5"/>
-                <ProgressBar Grid.Row="3" Grid.Column="1" Height="20" Margin="5" 
-                             Maximum="60" Value="{Binding RaceManager.TimeRemaining}"/>
-                <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding RaceManager.TimeRemainingDisplay}" 
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Time:" FontWeight="Bold"/>
+                <ProgressBar Grid.Row="2" Grid.Column="1" Height="20" x:Name="timeBar"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" x:Name="timeText" 
                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                
-                <!-- Speed Information -->
-                <TextBlock Grid.Row="4" Grid.Column="0" Text="Current Speed:" Margin="5"/>
-                <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding RaceManager.SelectedCar.CurrentSpeed, StringFormat={}{0:0} km/h}" Margin="5"/>
-                
-                <!-- Race Status -->
-                <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" x:Name="statusTextBlock" 
-                           TextWrapping="Wrap" Margin="5" VerticalAlignment="Top"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Speed:" FontWeight="Bold"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" x:Name="speedText" Text="0 km/h"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Progress:" FontWeight="Bold"/>
+                <TextBlock Grid.Row="4" Grid.Column="1" x:Name="progressText" 
+                           FontFamily="Courier New" Text="[>                   ]"/>
             </Grid>
-        </GroupBox>
-        
+        </StackPanel>
+
         <!-- Action Buttons -->
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
             <Button x:Name="speedUpButton" Content="Speed Up" Width="100" Margin="5" 
-                    Click="SpeedUpButton_Click" IsEnabled="False"/>
-            <Button x:Name="maintainSpeedButton" Content="Maintain Speed" Width="100" Margin="5" 
-                    Click="MaintainSpeedButton_Click" IsEnabled="False"/>
+                    IsEnabled="False" Click="SpeedUpButton_Click"/>
+            <Button x:Name="maintainButton" Content="Maintain Speed" Width="100" Margin="5" 
+                    IsEnabled="False" Click="MaintainButton_Click"/>
             <Button x:Name="pitStopButton" Content="Pit Stop" Width="100" Margin="5" 
-                    Click="PitStopButton_Click" IsEnabled="False"/>
+                    IsEnabled="False" Click="PitStopButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
