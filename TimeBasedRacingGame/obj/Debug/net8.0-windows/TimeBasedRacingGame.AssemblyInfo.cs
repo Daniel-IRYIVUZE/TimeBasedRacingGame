@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TimeBasedRacingGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+297d7ef3142e985830b4561b3e5ca2a557655097")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+276dd9db01ff7c6e828b15a759595ccba1d9139a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TimeBasedRacingGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TimeBasedRacingGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
