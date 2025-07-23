@@ -11,8 +11,6 @@ C# Speed Rush is a strategic, turn-based racing simulation game developed using 
 * Real-time tracking of fuel, speed, and lap progress
 * Intuitive UI with progress indicators
 * Robust input validation and exception handling
-* Unit-tested core components
-* MVVM-inspired architecture
 
 ---
 
